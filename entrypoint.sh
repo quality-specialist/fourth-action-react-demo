@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Hello from entrypoint.sh!!"
+
 # Check if Git is initialized
 if [ ! -d ".git" ]; then
     echo "Initializing new Git repository..."
@@ -20,6 +22,8 @@ else
         echo "Remote 'origin' added."
     fi
 fi
+
+echo "Good bye from entrypoint.sh!!"
 
 # Start the main process
 exec "$@"
